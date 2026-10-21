@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Register your team's interest in the ESCL cricket tournament.">
+  <title>Team Owners | ESCL</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ESCL home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" /><path d="M11 23V13m7 10V10m7 13V13M8 24h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><path d="m11 9 14 18" stroke="#facc15" stroke-width="2" stroke-linecap="round" /></svg></span>
+      <span class="brand-name">ESCL</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="board.html">Board</a>
+      <a href="players.html">Players</a>
+      <a href="owners.html" aria-current="page">Team owners</a>
+    </nav>
+    <div class="header-side"><span class="sponsor-pill">Ali &amp; Sons</span><a class="header-cta" href="#owner-form">Register <span aria-hidden="true">&nearr;</span></a></div>
+  </header>
+  <main id="top">
+    <section class="section-block owner-section page-section" aria-labelledby="owner-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">LEAD FROM THE SIDELINE</p><h1 id="owner-title">Team owners</h1></div>
+        <p class="section-summary">Have a squad ready to play? Register your interest as a team owner and help bring your club into the competition.</p>
+      </div>
+      <div class="owner-layout">
+        <div class="owner-copy">
+          <span class="aside-kicker">FOR TEAM OWNERS</span>
+          <h2>Bring your team<br>to the boundary.</h2>
+          <p>Share a few details about your team. The tournament organizers can follow up with competition information, scheduling, and next steps.</p>
+          <div class="owner-points">
+            <div><span>01</span><p><b>Introduce your team</b><small>Tell us your team name and size.</small></p></div>
+            <div><span>02</span><p><b>Set a point of contact</b><small>We will know who to reach with updates.</small></p></div>
+            <div><span>03</span><p><b>Get tournament details</b><small>Fixtures and entry information will follow.</small></p></div>
+          </div>
+        </div>
+        <div class="owner-form-wrap" id="owner-form">
+          <p class="preview-disclaimer"><strong>Preview only.</strong> Owner details stay in this browser tab and are not sent to tournament organizers.</p>
+          <form id="owner-registration-form" class="owner-form">
+            <div class="field-grid">
+              <label class="field field-wide" for="owner-team-name"><span>Team name <b>*</b></span><input id="owner-team-name" name="teamName" placeholder="Your team or club name" required></label>
+              <label class="field" for="owner-name"><span>Owner / contact name <b>*</b></span><input id="owner-name" name="ownerName" autocomplete="name" placeholder="Full name" required></label>
+              <label class="field" for="owner-phone"><span>Phone number <b>*</b></span><input id="owner-phone" name="phone" type="tel" autocomplete="tel" placeholder="Contact number" required></label>
+              <label class="field field-wide" for="owner-email"><span>Email address <b>*</b></span><input id="owner-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+              <label class="field field-wide" for="team-size"><span>Approximate squad size</span><select id="team-size" name="teamSize"><option value="" selected>Select a range</option><option>Under 11 players</option><option>11-15 players</option><option>16-22 players</option><option>More than 22 players</option></select></label>
+            </div>
+            <label class="consent" for="owner-consent"><input id="owner-consent" name="contactConsent" type="checkbox" required><span>I agree that tournament organizers may contact me about team registration. <b>*</b></span></label>
+            <button class="submit-button" type="submit"><span>Register team interest</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+            <p id="owner-form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <div id="owner-success" class="owner-success" role="status" tabindex="-1" hidden>Team interest saved in this browser tab. It has not been sent to tournament organizers.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-name">ESCL</span></a><span>COMMUNITY CRICKET / 2026</span><span class="sponsor-tag">Proudly sponsored by Ali &amp; Sons</span><a href="#top">Back to top &uarr;</a></footer>
+</body>
+</html>

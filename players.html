@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Register your player profile for the ESCL cricket tournament.">
+  <title>Player Registration | ESCL</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ESCL home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5" /><path d="M11 23V13m7 10V10m7 13V13M8 24h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><path d="m11 9 14 18" stroke="#facc15" stroke-width="2" stroke-linecap="round" /></svg></span>
+      <span class="brand-name">ESCL</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="board.html">Board</a>
+      <a href="players.html" aria-current="page">Players</a>
+      <a href="owners.html">Team owners</a>
+    </nav>
+    <div class="header-side"><span class="sponsor-pill">Ali &amp; Sons</span><a class="header-cta" href="#player-form">Register <span aria-hidden="true">&nearr;</span></a></div>
+  </header>
+  <main id="top">
+    <section class="section-block player-section page-section" aria-labelledby="player-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR PLACE ON THE FIELD</p><h1 id="player-title">Player registration</h1></div>
+        <p class="section-summary">New to the league or ready for another season? Share your playing profile and tell us how you want to join.</p>
+      </div>
+      <div class="registration-layout">
+        <aside class="registration-aside">
+          <span class="aside-kicker">FOR PLAYERS</span>
+          <h2>Every role.<br>Every level.</h2>
+          <p>Tell us what you bring to the game. You can register as an individual or let us know you already have a team.</p>
+          <div class="aside-detail"><span class="detail-mark">01</span><span><b>Build your profile</b><small>Role, experience, and playing style</small></span></div>
+          <div class="aside-detail"><span class="detail-mark">02</span><span><b>Choose your path</b><small>Join the open pool or an existing team</small></span></div>
+          <div class="preview-disclaimer">Preview only. Your details stay in this browser tab and are not sent to tournament organizers.</div>
+        </aside>
+        <div class="form-panel" id="player-form">
+          <div class="form-heading">
+            <div><p class="eyebrow form-eyebrow">ESCL / 2026</p><h2 id="form-title">Player details</h2></div>
+            <span class="form-index" aria-hidden="true">01<span>/</span>03</span>
+          </div>
+          <form id="registration-form">
+            <fieldset>
+              <legend><span>01</span> Your details</legend>
+              <div class="field-grid">
+                <label class="field field-wide" for="full-name"><span>Full name <b>*</b></span><input id="full-name" name="fullName" autocomplete="name" placeholder="e.g. Sam Taylor" required></label>
+                <label class="field" for="email"><span>Email address <b>*</b></span><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+                <label class="field" for="phone"><span>Phone number <b>*</b></span><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your best contact number" required></label>
+                <label class="field" for="age"><span>Age <b>*</b></span><input id="age" name="age" type="number" min="13" max="99" inputmode="numeric" placeholder="Age in years" required></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span>02</span> Cricket profile</legend>
+              <div class="field-grid">
+                <label class="field" for="role"><span>Primary role <b>*</b></span><select id="role" name="role" required><option value="" selected disabled>Select your role</option><option>Batter</option><option>Bowler</option><option>All-rounder</option><option>Wicketkeeper</option></select></label>
+                <label class="field" for="experience"><span>Playing experience</span><select id="experience" name="experience"><option value="" selected>Select one</option><option>New to organized cricket</option><option>School or club cricket</option><option>Local league cricket</option><option>Competitive cricket</option></select></label>
+                <label class="field" for="batting-style"><span>Batting style</span><select id="batting-style" name="battingStyle"><option value="" selected>Select one</option><option>Right-handed</option><option>Left-handed</option></select></label>
+                <label class="field" for="bowling-style"><span>Bowling style</span><select id="bowling-style" name="bowlingStyle"><option value="" selected>Select one</option><option>Right-arm pace</option><option>Left-arm pace</option><option>Right-arm spin</option><option>Left-arm spin</option><option>I do not bowl</option></select></label>
+              </div>
+            </fieldset>
+            <fieldset class="team-fieldset">
+              <legend><span>03</span> Team preference</legend>
+              <div class="field-grid">
+                <label class="field field-wide" for="team-preference"><span>How would you like to join? <b>*</b></span><select id="team-preference" name="teamPreference" required><option value="" selected disabled>Choose a preference</option><option value="open-pool">Place me in the open player pool</option><option value="existing-team">I already have a team</option></select></label>
+                <label class="field field-wide" id="team-name-field" for="team-name" hidden><span>Team name <b>*</b></span><input id="team-name" name="teamName" placeholder="Enter your team name"></label>
+              </div>
+            </fieldset>
+            <label class="consent" for="contact-consent"><input id="contact-consent" name="contactConsent" type="checkbox" required><span>I agree that tournament organizers may contact me about this registration. <b>*</b></span></label>
+            <div class="form-actions"><p class="required-note"><b>*</b> Required fields</p><button class="submit-button" type="submit"><span>Submit registration</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></button></div>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <section id="success-panel" class="success-panel" aria-live="polite" hidden><span class="success-mark" aria-hidden="true">&#10003;</span><div><h3 tabindex="-1">Details saved for this demo</h3><p>Your registration is stored in this browser tab only. It has not been sent to tournament organizers.</p></div><button id="register-another" class="text-button" type="button">Register another player</button></section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-name">ESCL</span></a><span>COMMUNITY CRICKET / 2026</span><span class="sponsor-tag">Proudly sponsored by Ali &amp; Sons</span><a href="#top">Back to top &uarr;</a></footer>
+</body>
+</html>
